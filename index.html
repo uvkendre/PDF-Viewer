@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Viewer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>PDF Viewer</h1>
+    
+    <!-- Upload Section -->
+    <div class="upload-section" id="upload-section">
+      <p>Drag and drop a PDF file here <br> or </p>
+      <label for="file-upload" id="file-upload-label">Select a PDF file to upload</label>
+      <input type="file" id="file-upload" accept="application/pdf" />
+    </div>
+    
+    <!-- PDF Viewer Section -->
+    <div class="viewer" style="display: none;">
+      <canvas id="pdf-render"></canvas>
+      <button id="close-viewer" class="close-button">
+        <i class="fa-solid fa-x"></i>
+      </button>
+    </div>
+    
+    <!-- Navigation Buttons -->
+    <div class="navigation" id="navigation">
+      <button id="prev">
+        <i class="fa-solid fa-caret-left"></i>
+      </button>
+      <span id="page-info">Page 1 of 1</span>
+      <button id="next">
+        <i class="fa-solid fa-caret-right"></i>
+      </button>
+    </div>
+    
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle">
+      <i id="theme-icon" class="fa-solid fa-sun"></i>
+    </button>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

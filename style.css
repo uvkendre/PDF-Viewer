@@ -1,0 +1,145 @@
+/* Basic body styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  transition: all 0.5s;
+}
+
+/* Dark mode styling */
+body.dark {
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+/* Container for content */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Header styles */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Upload section */
+.upload-section {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  background-color: #fff;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+/* Dragover effect */
+.upload-section.dragover {
+  border-color: #007bff;
+  background-color: #eaf4ff;
+}
+
+/* Style for file upload label */
+#file-upload-label {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #5d99d9;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#file-upload-label:hover {
+  background-color: #007bff;
+}
+
+/* Hide the default file input */
+#file-upload {
+  display: none;
+}
+
+/* Viewer styles */
+.viewer {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+/* Canvas for rendering PDF */
+canvas {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #ff0000;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Navigation buttons */
+.navigation {
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #5d99d9;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#theme-toggle:hover {
+  background-color: #007bff;
+}
+
+/* Dark mode styles */
+body.dark .upload-section {
+  background-color: #444;
+  border-color: #666;
+}
+
+body.dark .viewer {
+  background-color: #444;
+}
+
+body.dark .close-button {
+  color: #ff0000;
+  background-color: transparent;
+}
+
+body.dark button {
+  background-color: #444;
+  color: #f4f4f4;
+}
